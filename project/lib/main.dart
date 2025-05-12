@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,7 +8,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'TUGAS PEMROGRAMAN BERGERAK',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -80,12 +81,13 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(height: 24),
               ElevatedButton(
                 onPressed: () {
-                  if (_formKey.currentState!.validate()) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ProfilePage()),
-                    );
-                  }
+                  // if (_formKey.currentState!.validate()) {
+                  //   Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(builder: (context) => ProfilePage()),
+                  //   );
+                  // }
+                  Get.to(ProfilePage());
                 },
                 child: Text('Masuk'),
               ),
